@@ -171,6 +171,8 @@ class sankeybackend():
 		self.node_colors = self.colorlist[:self.numberofnodes]
 
 	def evalute_ifincomingequalsoutgoing(self, list_internalnodes):
+		print('\n-----------Evaluating if the volume entering internal nodes equals the volume exiting:----------\n')
+
 		df_groupby_sources = self.df_groupby.groupby(by=['source']).agg({'rows': 'sum'})
 		df_groupby_targets = self.df_groupby.groupby(by=['target']).agg({'rows': 'sum'})
 
@@ -184,6 +186,7 @@ class sankeybackend():
 				print('failed: {}, number of source rows: {}, number of target rows: {}, difference: {}'.format(internalnode,
 					      count_sources, count_targets,
 						  count_sources-count_targets))
+		print('--------------------------------------------------------------------------')
 
 #%%
 
