@@ -1,0 +1,13 @@
+source,target,rows
+prefolder,folder,5
+prefolder,cond,3
+prefolder,suspense,1
+folder,cond,15
+folder,suspense,2
+cond,suspense,10
+cond,signoff,30
+signoff,close,20
+signoff,suspense,10
+suspense,cond,5
+suspense,signoff,5
+suspense,fallen,10
